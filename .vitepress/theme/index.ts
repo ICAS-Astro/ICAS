@@ -1,17 +1,24 @@
-// https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import { VoidZeroTheme, themeContextKey } from "@voidzero-dev/vitepress-theme/src";
+import type { Theme } from "vitepress";
+
+import logoDark from "../../assets/icas-dark.svg";
+import logoLight from "../../assets/icas-light.svg";
+
+import footerBg from "../../assets/footer-background.png";
+import monoIcon from "../../assets/icas-comet-mono.svg";
+
+import "@voidzero-dev/vitepress-theme/src/styles/index.css";
 
 export default {
-  extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
+  ...VoidZeroTheme,
+  enhanceApp(ctx) {
+    ctx.app.provide(themeContextKey, {
+      logoDark,
+      logoLight,
+      logoAlt: "Vite",
+      footerBg,
+      monoIcon,
+    });
+    VoidZeroTheme.enhanceApp(ctx)
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  }
-} satisfies Theme
+} satisfies Theme;

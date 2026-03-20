@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+import { extendConfig } from "@voidzero-dev/vitepress-theme/config";
+
+let conf = {
   srcDir: "src",
-  
+
   title: "ICAS - documents",
   description: "Corpus de documents dédié à l'étude du projet ICAS dans le cadre de l'EIP d'Epitech",
   themeConfig: {
@@ -27,4 +28,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   }
-})
+}
+
+export default extendConfig(
+  defineConfig(conf)
+)
