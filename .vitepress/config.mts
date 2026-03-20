@@ -1,8 +1,9 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, UserConfig } from 'vitepress'
 
 import { extendConfig } from "@voidzero-dev/vitepress-theme/config";
+import { DefaultTheme } from 'vitepress/theme';
 
-let conf = {
+let conf: UserConfig<NoInfer<DefaultTheme.Config>>  = {
   srcDir: "src",
 
   title: "ICAS - documents",
@@ -21,19 +22,20 @@ let conf = {
       {
         text: 'Documents',
         items: [
-          { text: 'Intuition', link: '/intuition' },
-          { text: 'Personas', link: '/personas' },
-          { text: 'User stories', link: '/user-stories' },
-          { text: 'Backlog', link: '/backlog' },
-          { text: 'État de l\'Art', link: '/state-of-the-art' },
-          { text: 'Coût & Échelle', link: '/cost-and-sizing' },
-          { text: 'Impacts, Risques & Mitigation', link: '/impacts-risks-and-mitigation' },
-          { text: 'Analyze SWOT', link: '/swot' },
-          { text: 'Impact Environemental', link: '/environmental-impact' },
-          { text: 'Déployement & Résilience', link: '/deployment-resilience' },
-          { text: 'Risques de sécurité', link: '/security-risks' },
-          { text: 'Accessibilité', link: '/accessibility' },
-          { text: 'RGPD', link: '/rgpd' },
+          { text: '👁️‍🗨️ Intuition', link: '/intuition' },
+          { text: '🧑‍🏫 Personas', link: '/personas' },
+          { text: '📖 Histoire utilisateurs', link: '/user-stories' },
+          { text: '📚 Backlog', link: '/backlog' },
+          { text: '⚛️ État de l\'Art', link: '/state-of-the-art' },
+          { text: '💵 Coût & Échelle', link: '/cost-and-sizing' },
+          { text: '📊 Gestion des risques', link: '/impacts-risks-and-mitigation' },
+          { text: '🧩 Analyze SWOT', link: '/swot' },
+          { text: '🛰️ Déployement & Résilience', link: '/deployment-resilience' },
+          { text: '🍃 Impact Environemental', link: '/environmental-impact' },
+          { text: '🔐 Risques de sécurité', link: '/security-risks' },
+          { text: '♿ Accessibilité', link: '/accessibility' },
+          { text: '🧑‍⚖️ RGPD', link: '/rgpd' },
+          { text: '🔭 Comparatif', link: '/feature-comparison' },
         ]
       }
     ],
