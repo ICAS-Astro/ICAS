@@ -1,0 +1,9 @@
+# vitepress cache
+.vitepress/cache
+
+# nodejs
+node_modules
+
+# nix
+.direnv
+.envrc
