@@ -17,6 +17,8 @@ let conf = {
         text: 'Documents',
         items: [
           { text: 'Intuition', link: '/intuition' },
+          { text: 'Personas', link: '/personas' },
+          { text: 'User stories', link: '/user-stories' },
         ]
       }
     ],
