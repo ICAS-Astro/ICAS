@@ -7,6 +7,11 @@ let conf = {
 
   title: "ICAS - documents",
   description: "Corpus de documents dédié à l'étude du projet ICAS dans le cadre de l'EIP d'Epitech",
+
+  vite: {
+    publicDir: '../assets'
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
