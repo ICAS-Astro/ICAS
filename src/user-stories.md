@@ -1,4 +1,4 @@
-# User stories
+# Histoire utilisateurs
 
 ## Installation simple du matériel
 
