@@ -14,9 +14,9 @@ let conf = {
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-    ],
-
+    search: {
+      provider: "local"
+    },
     sidebar: [
       {
         text: 'Documents',
